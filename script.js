@@ -37,7 +37,7 @@ function sleep() {
     energyDisplay.innerText = currentEnergy;
 
     if (currentEnergy >= 80) {
-       
+        petDisplay.innerText = "";
     }
 
 }
@@ -59,7 +59,7 @@ function play() {
     happinessDisplay.innerText = currentHappiness;
 
     if (currentHappiness >= 80) {
-
+        petDisplay.innerText = "";
     }
 }
 
