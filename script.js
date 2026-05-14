@@ -6,38 +6,39 @@ let petDisplay = document.getElementById("pet");
 
 let currentHunger = 50;
 
-function feedPet() {
-    console.log("clicked");
-    currentHunger = currentHunger + 20;
-    if (currentHunger > 100) {
-        currentHunger = 100;
-    }
-
-    hungerDisplay.innerText = currentHunger;
-
-    if (currentHunger >= 80) {
-        petDisplay.innerText = "😸";
-    }
-}
-feedButton.addEventListener("click", feedPet);
-
-
-let sleepButton = document.getElementById("play-btn");
+let sleepButton = document.getElementById("sleep-btn");
 let energyDisplay = document.getElementById("energy-level");
 
 let currentEnergy = 50;
+
+function feedPet(){
+    console.log("clicked");
+    currentHunger = currentHunger + 20;
+    if (currentEnergy > 100) {
+        currentEnergy = 100
+    }
+
+    hungerDisplay.innerText = currentHunger;
+    if (currentHunger >= 80) {
+        petDisplay.innerText = "😁";
+    }
+}
+
+feedButton.addEventListener("click", feedPet);
+
+
 
 function sleep() {
     console.log("clicked");
     currentEnergy = currentEnergy + 20;
     if (currentEnergy > 100) {
-        currentEnergy = 100;
+        currentEnergy = 100
     }
 
     energyDisplay.innerText = currentEnergy;
 
     if (currentEnergy >= 80) {
-        petDisplay.innerText = "";
+        petDisplay.innerText = "😴";
     }
 
 }
@@ -59,7 +60,10 @@ function play() {
     happinessDisplay.innerText = currentHappiness;
 
     if (currentHappiness >= 80) {
-        petDisplay.innerText = "";
+        petDisplay.innerText = "😊";
     }
 }
+
+playButton.addEventListener("click", play);
+
 
